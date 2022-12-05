@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(params.require(:article).permit(:title, :description))
     # render plain: @article.inspect
     @article.save
+    redirect_to @article
   end
 
 
